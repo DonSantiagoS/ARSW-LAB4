@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package edu.eci.arsw.blueprints.persistence;
+
+import edu.eci.arsw.blueprints.model.Blueprint;
+
  /**
  * ---------------------------------------------------------------------------------------------------------------------------
  * ---------------------------------------------------------------------------------------------------------------------------
@@ -15,10 +14,6 @@
  * @version 1.0
  * ---------------------------------------------------------------------------------------------------------------------------
  */
-package edu.eci.arsw.blueprints.persistence;
-
-import edu.eci.arsw.blueprints.model.Blueprint;
-
 /**
  *
  * @author hcadavid
@@ -40,6 +35,5 @@ public interface BlueprintsPersistence {
      * @return the blueprint of the given name and author
      * @throws BlueprintNotFoundException if there is no such blueprint
      */
-    public Blueprint getBlueprint(String author,String bprintname) throws BlueprintNotFoundException;
-    
+    public Blueprint getBlueprint(String author,String bprintname) throws BlueprintNotFoundException; 
 }

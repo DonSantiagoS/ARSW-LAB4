@@ -1,7 +1,9 @@
 ### Escuela Colombiana de Ingeniería
 
-### Arquitecturas de Software
+### Arquitecturas de Software – ARSW
+
 ## Laboratorio Componentes y conectores  Middleware- gestión de planos
+
 ### Dependencias
 * [Ejercicio introductorio al manejo de Spring y la configuración basada en anotaciones](https://github.com/ARSW-ECI-beta/DIP_DI-SPRING_JAVA-GRAMMAR_CHECKER).
 
@@ -31,3 +33,26 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
 	* (B) Filtrado de submuestreo: suprime 1 de cada 2 puntos del plano, de manera intercalada.
 
 5. Agrege las pruebas correspondientes a cada uno de estos filtros, y pruebe su funcionamiento en el programa de prueba, comprobando que sólo cambiando la posición de las anotaciones -sin cambiar nada más-, el programa retorne los planos filtrados de la manera (A) o de la manera (B). 
+
+## Control de versiones
+
+por: 
++ [Santiago Buitrago](https://github.com/DonSantiagoS) 
++ [Steven Garzon](https://github.com/stevengarzon7) 
+
+Version: 1.0
+Fecha: 02 de febrero 2021
+
+### Autores
+
+* **Santiago Buitrago** - *Laboratorio N°2* - [DonSantiagoS](https://github.com/DonSantiagoS)
+* **Steven Garzon** - *Laboratorio N°2* - [stevengarzon7](https://github.com/stevengarzon7)
+
+## Licencia 
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Agradecimientos
+
+* Persistencia en lograr el objetivo
+
