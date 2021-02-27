@@ -1,6 +1,7 @@
 package edu.eci.arsw.blueprints.persistence.impl;
 
 import java.util.Objects;
+
 /**
  * ---------------------------------------------------------------------------------------------------------------------------
  * ---------------------------------------------------------------------------------------------------------------------------
@@ -13,25 +14,34 @@ import java.util.Objects;
  * @version 1.0
  * ---------------------------------------------------------------------------------------------------------------------------
  */
+ 
 public class Tuple<T1, T2> {
 
     T1 o1;
     T2 o2;
-
+	
+	/**
+	*/
     public Tuple(T1 o1, T2 o2) {
         super();
         this.o1 = o1;
         this.o2 = o2;
     }
-
+	
+	/**
+	*/
     public T1 getElem1() {
         return o1;
     }
-
+	
+	/**
+	*/
     public T2 getElem2() {
         return o2;
     }
-
+	
+	/**
+	*/
     @Override
     public int hashCode() {
         int hash = 7;
@@ -39,7 +49,10 @@ public class Tuple<T1, T2> {
         hash = 17 * hash + Objects.hashCode(this.o2);
         return hash;
     }
-
+	
+	/**
+	* 
+	*/
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -60,6 +73,4 @@ public class Tuple<T1, T2> {
         }
         return true;
     }
-    
-    
 }
