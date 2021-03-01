@@ -27,6 +27,14 @@ public class Blueprint {
 
 	/**
 	*/
+	public Blueprint(String author,String name,List<Point> pnts){
+        this.author=author;
+        this.name=name;
+        points=pnts;
+    }
+	
+	/**
+	*/
     public Blueprint(String author,String name,Point[] pnts){
         this.author=author;
         this.name=name;

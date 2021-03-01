@@ -1,9 +1,11 @@
-package edu.eci.arsw.blueprints.persistence;
+package edu.eci.arsw.blueprints;
+
+import edu.eci.arsw.blueprints.model.Blueprint;
 
 /**
  * ---------------------------------------------------------------------------------------------------------------------------
  * ---------------------------------------------------------------------------------------------------------------------------
- * 													CLASE: BlueprintPersistenceException
+ * 													CLASE: filtroBlueprints
  * ---------------------------------------------------------------------------------------------------------------------------
  * 
  * ---------------------------------------------------------------------------------------------------------------------------
@@ -12,21 +14,7 @@ package edu.eci.arsw.blueprints.persistence;
  * @version 1.0
  * ---------------------------------------------------------------------------------------------------------------------------
  */
-/**
- *
- * @author hcadavid
- */
-public class BlueprintPersistenceException extends Exception{
-	
-	/**
-	*/
-    public BlueprintPersistenceException(String message) {
-        super(message);
-    }
 
-	/**
-	*/
-    public BlueprintPersistenceException(String message, Throwable cause) {
-        super(message, cause);
-    }   
+public interface filtroBlueprints {
+    public Blueprint filtro(Blueprint bp);
 }

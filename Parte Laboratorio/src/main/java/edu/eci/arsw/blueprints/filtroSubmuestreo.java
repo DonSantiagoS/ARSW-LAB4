@@ -1,9 +1,14 @@
-package edu.eci.arsw.blueprints.persistence;
+package edu.eci.arsw.blueprints;
+
+import edu.eci.arsw.blueprints.model.*;
+import org.springframework.stereotype.Service;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * ---------------------------------------------------------------------------------------------------------------------------
  * ---------------------------------------------------------------------------------------------------------------------------
- * 													CLASE: BlueprintPersistenceException
+ * 													CLASE: filtroSubmuestreo
  * ---------------------------------------------------------------------------------------------------------------------------
  * 
  * ---------------------------------------------------------------------------------------------------------------------------
@@ -12,21 +17,25 @@ package edu.eci.arsw.blueprints.persistence;
  * @version 1.0
  * ---------------------------------------------------------------------------------------------------------------------------
  */
-/**
- *
- * @author hcadavid
- */
-public class BlueprintPersistenceException extends Exception{
+ 
+@Service("filtroSubmuestreo")
+public class filtroSubmuestreo implements filtroBlueprints {
+    
+	public filtroSubmuestreo(){
+	}
 	
 	/**
+	* 
 	*/
-    public BlueprintPersistenceException(String message) {
-        super(message);
+	@Override
+    public Blueprint filtro(Blueprint bp) {
+        List<Point> oldPoints=bp.getPoints();
+        ArrayList<Point> points=new ArrayList<Point>();
+        for(int i=0;i<oldPoints.size();i++){
+            if((i%2)==0){
+                points.add(oldPoints.get(i));
+            }
+        }
+        return new Blueprint(bp.getAuthor(),bp.getName(),points);
     }
-
-	/**
-	*/
-    public BlueprintPersistenceException(String message, Throwable cause) {
-        super(message, cause);
-    }   
 }

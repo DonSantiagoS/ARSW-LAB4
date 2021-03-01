@@ -7,6 +7,9 @@ import edu.eci.arsw.blueprints.persistence.BlueprintPersistenceException;
 import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
+import org.springframework.stereotype.Service;
 
  /**
  * ---------------------------------------------------------------------------------------------------------------------------
@@ -24,6 +27,7 @@ import java.util.Map;
  *
  * @author hcadavid
  */
+@Service("InMemoryBlueprintPersistence")
 public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
 
     private final Map<Tuple<String,String>,Blueprint> blueprints=new HashMap<>();
@@ -38,6 +42,13 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         
     }    
     
+	/**
+	*/
+	@Override
+    public  HashSet<Blueprint> getAllBlueprints(){
+        return new HashSet<Blueprint>(blueprints.values());
+    }
+	
 	/**
 	*/
 	@Override
