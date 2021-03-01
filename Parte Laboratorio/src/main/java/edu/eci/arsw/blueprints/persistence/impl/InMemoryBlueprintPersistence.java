@@ -11,7 +11,7 @@ import java.util.Map;
  /**
  * ---------------------------------------------------------------------------------------------------------------------------
  * ---------------------------------------------------------------------------------------------------------------------------
- * 													CLASE: 
+ * 													CLASE: InMemoryBlueprintPersistence
  * ---------------------------------------------------------------------------------------------------------------------------
  * 
  * ---------------------------------------------------------------------------------------------------------------------------
@@ -38,6 +38,20 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         
     }    
     
+	/**
+	*/
+	@Override
+	public Set<Blueprint> getBlueprintsByAuthor(String author) throws BlueprintNotFoundException{
+		Set<Blueprint> autorBp = new HashSet<>();
+        Set<Tuple<String,String>> llaves = blueprints.keySet();
+        for(Tuple<String,String> i : llaves){
+            if(i.getElem1().equals(author)){
+                autorBp.add(blueprints.get(i));
+            }
+        }
+        return autorBp;
+	}
+	
 	/**
 	*/
     @Override
