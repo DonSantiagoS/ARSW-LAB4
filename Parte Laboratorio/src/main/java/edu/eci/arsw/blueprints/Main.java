@@ -34,6 +34,6 @@ public class Main {
         serviceBluePrint.addNewBlueprint(new Blueprint("Santiago","bp3",points));
         System.out.println(serviceBluePrint.getAllBlueprints());
         Blueprint bp3=serviceBluePrint.getBlueprint("Santiago","bp3");
-        System.out.println(serviceBluePrint.filter(bp3).getPoints());
+        System.out.println(serviceBluePrint.filtro(bp3).getPoints());
     }
 }

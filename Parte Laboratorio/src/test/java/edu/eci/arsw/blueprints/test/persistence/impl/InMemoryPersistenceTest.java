@@ -9,6 +9,8 @@ import edu.eci.arsw.blueprints.persistence.impl.InMemoryBlueprintPersistence;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.Test;
+import java.util.HashSet;
+import java.util.Set;
 import static org.junit.Assert.*;
 
 /**

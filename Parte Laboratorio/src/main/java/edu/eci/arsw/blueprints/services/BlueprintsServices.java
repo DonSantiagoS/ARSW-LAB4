@@ -1,7 +1,7 @@
 package edu.eci.arsw.blueprints.services;
 
 import edu.eci.arsw.blueprints.model.Blueprint;
-import edu.eci.arsw.blueprints.filters.BlueprintsFilter;
+import edu.eci.arsw.blueprints.filtroBlueprints;
 import edu.eci.arsw.blueprints.model.Point;
 import edu.eci.arsw.blueprints.persistence.BlueprintNotFoundException;
 import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
@@ -41,9 +41,12 @@ public class BlueprintsServices {
     BlueprintsPersistence bpp=null;
 	
 	@Autowired
-    @Qualifier("RedundancyFilter")
-    BlueprintsFilter bpf;
-    
+    @Qualifier("filtroRedundancia")
+    filtroBlueprints fbp;
+    public Blueprint filtro(Blueprint blueprint){
+        return fbp.filtro(blueprint);
+    }
+	
     public void addNewBlueprint(Blueprint bp) throws BlueprintPersistenceException{
         bpp.saveBlueprint(bp);
     }
@@ -73,8 +76,6 @@ public class BlueprintsServices {
         return bpp.getBlueprintsByAuthor(author);
     }
 	
-	public Blueprint filter(Blueprint blueprint){
-        return bpf.filter(blueprint);
-    }
+	
     
 }

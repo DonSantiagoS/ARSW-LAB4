@@ -1,10 +1,12 @@
 package edu.eci.arsw.blueprints.test.persistence.impl;
 
-import edu.eci.arsw.blueprints.filters.filtroSubmuestreo;
+import edu.eci.arsw.blueprints.filtroSubmuestreo;
 import edu.eci.arsw.blueprints.model.*;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
@@ -27,7 +29,7 @@ public class filtroSubmuestreoTest {
         filtroSubmuestreo prueba = new filtroSubmuestreo();
         Point points[] = {new Point(1,2), new Point(3,4), new Point(5,6), new Point(7,8), new Point(9,10)};
         Blueprint blueprint = new Blueprint("mack","mypaint",points);
-        blueprint = prueba.filter(blueprint);
+        blueprint = prueba.filtro(blueprint);
         List<Point> resultado = new ArrayList<>();
         resultado.add(new Point(1,2));
         resultado.add(new Point(5,6));
